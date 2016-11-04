@@ -1,0 +1,7 @@
+Name: Magnific Popup Recall;
+Description: Увеличиваем изображения. Скрипт Magnific Popup от Дмитрия Семёнова http://dimsemenov.com/plugins/magnific-popup/;
+Version: 1.0;
+Support Core: 15.4.0;
+Author: Владимир Дружаев (Otshelnik-Fm), Дмитрий Семёнов;
+Author URI: http://dimsemenov.com/plugins/magnific-popup/;
+Add-on URI: https://codeseller.ru/products/magnific-popup-recall;

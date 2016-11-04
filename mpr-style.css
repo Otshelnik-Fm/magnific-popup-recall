@@ -1,0 +1,27 @@
+.mfp-arrow {
+    position: fixed;
+}
+.mfp-close {
+    font-size: 50px;
+    margin: 0 20px;
+    position: fixed;
+}
+@-webkit-keyframes mpfadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes mpfadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.mfp-content,
+.mfp-open .mfp-figure {
+    -webkit-animation-name: mpfadeIn;
+    animation-name: mpfadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    backface-visibility:    hidden;
+}
