@@ -5,7 +5,7 @@
 // подключаю скрипты
 function mpr_load_resource() {
     if(!is_admin()){
-        rcl_enqueue_style('mpr-general',rcl_addon_url('incl/dist/magnific-popup.css', __FILE__));
+        //rcl_enqueue_style('mpr-general',rcl_addon_url('incl/dist/magnific-popup.css', __FILE__)); // родные стили от скрипта теперь в общем файле
         rcl_enqueue_style('mpr-second',rcl_addon_url('mpr-style.css', __FILE__));
     }
 }
@@ -21,12 +21,14 @@ add_action('wp_enqueue_scripts', 'mpr_load_scr', 10);
 // скрипт инициализации
 function mpr_init_script(){
 $out = "<script>
-(function($){var type_image = 'a[href$=\".bmp\"],a[href$=\".gif\"],a[href$=\".jpg\"],a[href$=\".jpeg\"],a[href$=\".png\"]';var select = $(type_image).not('.nomagnific');select.addClass('mpr_image');jQuery(document).ready(function() {jQuery('.mpr_image').magnificPopup({type: 'image',closeBtnInside:false,tClose: 'Закрыть (Esc)',gallery:{enabled:true,tPrev: 'Предыдущее',tNext: 'Следующее',tCounter: '<span class=\"mfp-counter\">%curr% из %total%</span>'},image: {verticalFit: false,tError: '<a href=\"%url%\">Изображение</a> не может быть загружено.'},callbacks: {change: function() {if (this.isOpen) {this.wrap.addClass('mfp-open');}}}});});})(jQuery);
+(function($){var a='a[href$=\".bmp\"],a[href$=\".gif\"],a[href$=\".jpg\"],a[href$=\".jpeg\"],a[href$=\".png\"]';var b=$(a).not('.nomagnific');b.addClass('mpr_image');$(document).ready(function(){MpActivate()})})(jQuery);function MpActivate(){jQuery('.mpr_image').magnificPopup({type:'image',closeBtnInside:false,tClose:'Закрыть (Esc)',gallery:{enabled:true,tPrev:'Предыдущее',tNext:'Следующее',tCounter:'<span class=\"mfp-counter\">%curr% из %total%</span>'},image:{verticalFit:false,tError:'<a href=\"%url%\">Изображение</a> не может быть загружено.'},callbacks:{change:function(){if(this.isOpen){this.wrap.addClass('mfp-open')}}}})}
 </script>";
     echo $out;
 }
 add_action('wp_footer','mpr_init_script',120);
 
+
+// пакую этим js пакером http://dean.edwards.name/packer/
 
 // скрипт для разработки. Выше - он же но сжатый
 function mpr_init_script_develop(){
@@ -36,31 +38,34 @@ function mpr_init_script_develop(){
     var select = $(type_image).not('.nomagnific'); // ассоциируем и добавляем исключающий класс
     select.addClass('mpr_image'); // присваиваем всем картинкам класс
     $(document).ready(function() {
-        $('.mpr_image').magnificPopup({
-            type: 'image',
-            //disableOn:function(){return $(window).width()<500?!1:!0},
-            closeBtnInside:false,
-            tClose: 'Закрыть (Esc)',
-            gallery:{
-                enabled:true,
-                tPrev: 'Предыдущее',
-                tNext: 'Следующее',
-                tCounter: '<span class=\"mfp-counter\">%curr% из %total%</span>'
-            },
-            image: {
-                verticalFit: false,
-                tError: '<a href=\"%url%\">Изображение</a> не может быть загружено.'
-            },
-            callbacks: {
-                change: function() {
-                    if (this.isOpen) {
-                        this.wrap.addClass('mfp-open');
-                    }
-                }
-            }
-        });
+        MpActivate();
     });
 })(jQuery);
+function MpActivate() { // инициализация отдельной функцией - можно вызывать после ajax
+    jQuery('.mpr_image').magnificPopup({
+        type: 'image',
+        //disableOn:function(){return $(window).width()<500?!1:!0},
+        closeBtnInside:false,
+        tClose: 'Закрыть (Esc)',
+        gallery:{
+            enabled:true,
+            tPrev: 'Предыдущее',
+            tNext: 'Следующее',
+            tCounter: '<span class=\"mfp-counter\">%curr% из %total%</span>'
+        },
+        image: {
+            verticalFit: false,
+            tError: '<a href=\"%url%\">Изображение</a> не может быть загружено.'
+        },
+        callbacks: {
+            change: function() {
+                if (this.isOpen) {
+                    this.wrap.addClass('mfp-open');
+                }
+            }
+        }
+    });
+}
 </script>";
     echo $out;
 }
