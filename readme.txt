@@ -37,9 +37,20 @@
 Выход есть - после успешной загрузки ajax вам нужно реинициализировать скрипт.
 Просто вызовите в своем скрипте после ajax-запроса js функцию MpActivate();
 
+<hr style="border: 1px solid #ddd;">
+
+<h4>Двоятся изображения в Prime Forum. Как выключить одну галерею?</h4>
+- Чтобы сайт использовал единую галерею - в настройках Prime Forum отключите опцию "Галерея изображений"
+
 
 
 == Changelog ==
+= 2017-09-05 =
+v1.2
+* Поддержка дополнения <a href="https://codeseller.ru/products/prime-image-uploader/" target="_blank">Prime Image Uploader</a> для <a href="https://codeseller.ru/products/primeforum/" target="_blank">Prime Forum</a>
+- Чтобы сайт использовал единую галерею - в настройках Prime Forum отключите опцию "Галерея изображений"
+
+
 = 2017-08-14 =
 v1.1
 * скрипт инициализации главного скрипта галереи обернут в функцию MpActivate();

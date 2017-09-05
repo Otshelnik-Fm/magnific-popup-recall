@@ -21,7 +21,7 @@ add_action('wp_enqueue_scripts', 'mpr_load_scr', 10);
 // скрипт инициализации
 function mpr_init_script(){
 $out = "<script>
-(function($){var a='a[href$=\".bmp\"],a[href$=\".gif\"],a[href$=\".jpg\"],a[href$=\".jpeg\"],a[href$=\".png\"]';var b=$(a).not('.nomagnific');b.addClass('mpr_image');$(document).ready(function(){MpActivate()})})(jQuery);function MpActivate(){jQuery('.mpr_image').magnificPopup({type:'image',closeBtnInside:false,tClose:'Закрыть (Esc)',gallery:{enabled:true,tPrev:'Предыдущее',tNext:'Следующее',tCounter:'<span class=\"mfp-counter\">%curr% из %total%</span>'},image:{verticalFit:false,tError:'<a href=\"%url%\">Изображение</a> не может быть загружено.'},callbacks:{change:function(){if(this.isOpen){this.wrap.addClass('mfp-open')}}}})}
+jQuery(document).ready(function(){MpActivate()});function MpActivate(){var a='a[href$=\".bmp\"],a[href$=\".gif\"],a[href$=\".jpg\"],a[href$=\".jpeg\"],a[href$=\".png\"]';var b=jQuery(a).not('.nomagnific');b.addClass('mpr_image');jQuery('.mpr_image').magnificPopup({type:'image',closeBtnInside:false,tClose:'Закрыть (Esc)',gallery:{enabled:true,tPrev:'Предыдущее',tNext:'Следующее',tCounter:'<span class=\"mfp-counter\">%curr% из %total%</span>'},image:{verticalFit:false,tError:'<a href=\"%url%\">Изображение</a> не может быть загружено.'},callbacks:{change:function(){if(this.isOpen){this.wrap.addClass('mfp-open')}}}})}function mprPrimeReload(a){var b=a.result;var c=a.object;if(c.method!='post_create'||b.error)return false;MpActivate()}rcl_add_action('pfm_ajax_action_success','mprPrimeReload');
 </script>";
     echo $out;
 }
@@ -33,15 +33,17 @@ add_action('wp_footer','mpr_init_script',120);
 // скрипт для разработки. Выше - он же но сжатый
 function mpr_init_script_develop(){
     $out = "<script>
-(function($){
-    var type_image = 'a[href$=\".bmp\"],a[href$=\".gif\"],a[href$=\".jpg\"],a[href$=\".jpeg\"],a[href$=\".png\"]';
-    var select = $(type_image).not('.nomagnific'); // ассоциируем и добавляем исключающий класс
-    select.addClass('mpr_image'); // присваиваем всем картинкам класс
-    $(document).ready(function() {
-        MpActivate();
-    });
-})(jQuery);
+
+jQuery(document).ready(function() {
+    MpActivate();
+});
+
+
 function MpActivate() { // инициализация отдельной функцией - можно вызывать после ajax
+    var type_image = 'a[href$=\".bmp\"],a[href$=\".gif\"],a[href$=\".jpg\"],a[href$=\".jpeg\"],a[href$=\".png\"]';
+    var select = jQuery(type_image).not('.nomagnific'); // ассоциируем и добавляем исключающий класс
+    select.addClass('mpr_image'); // присваиваем всем картинкам класс
+
     jQuery('.mpr_image').magnificPopup({
         type: 'image',
         //disableOn:function(){return $(window).width()<500?!1:!0},
@@ -66,6 +68,19 @@ function MpActivate() { // инициализация отдельной фун�
         }
     });
 }
+
+
+// поддержка допа Prime Image Uploader
+function mprPrimeReload(success){
+    var result = success.result;
+    var object = success.object;
+
+    if(object.method != 'post_create' || result.error) return false;
+
+    MpActivate();
+}
+rcl_add_action('pfm_ajax_action_success','mprPrimeReload');
+
 </script>";
     echo $out;
 }
