@@ -1,0 +1,41 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mpr\n"
+"POT-Creation-Date: 2018-06-19 22:47+0400\n"
+"PO-Revision-Date: 2018-06-19 22:57+0400\n"
+"Last-Translator: \n"
+"Language-Team: otshelnik-fm@yandex.ru\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.8\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: index.php:24
+msgid "Close (Esc)"
+msgstr "Cerrar (Esc)"
+
+#: index.php:25
+msgid "Previous"
+msgstr "Anterior"
+
+#: index.php:26
+msgid "Next"
+msgstr "El siguiente"
+
+#: index.php:27
+msgid "of"
+msgstr "de"
+
+#: index.php:28
+msgid "Image"
+msgstr "La imagen"
+
+#: index.php:29
+msgid "could not be loaded"
+msgstr "no se puede descargar"

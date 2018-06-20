@@ -23,7 +23,7 @@
 
 
 <h4>Вставляю изображение - а оно не увеличивается. Что не так?</h4>
-- Важно чтобы вы вставляли изображение из WordPress медиабиблиотеки отмеченное как "медиафайл"
+- Важно, чтобы вы вставляли изображение из WordPress медиабиблиотеки отмеченное как "медиафайл"
 В медиабиблиотеке выбираешь справа "медиафайл" <a href="https://yadi.sk/i/ZrzNkrV-y75JV" target="_blank">Скриншот</a>
 
 т.е., если смотреть исходный код страницы, изображение должно быть внутри тега <code>&lt;a</code>
@@ -45,6 +45,17 @@
 
 
 == Changelog ==
+
+= 2018-06-20 =
+v1.3
+* Поддержка мультиязычности
+* Добавлены переводы на 8 языков: Русский, английский, украинский, немецкий, итальянский, испанский, французский, румынский
+* Добавлена иконка дополнения
+* Стили не критичные для 1-го экрана, поэтому гружу их в подвале.
+* Стили от ядра magnific сжал
+* Анимация переведена на ядро WP-Recall (animate-css)
+
+
 = 2017-09-05 =
 v1.2
 * Поддержка дополнения <a href="https://codeseller.ru/products/prime-image-uploader/" target="_blank">Prime Image Uploader</a> для <a href="https://codeseller.ru/products/primeforum/" target="_blank">Prime Forum</a>
@@ -70,7 +81,7 @@ v1.0
 == Поддержка/Контакты ==
 
 * Поддержка осуществляется в рамках текущего функционала дополнения
-* При возникновении проблемы, создайте соотвествующую тему на <a href="https://codeseller.ru/forum/product-13622/" target="_blank">форуме поддержки товара</a>
+* При возникновении проблемы, создайте соотвествующую тему на форуме поддержки товара
 * Если вам нужна доработка под ваши нужды - вы можете обратиться ко мне в <a href="https://codeseller.ru/author/otshelnik-fm/?tab=chat" target="_blank">ЛС</a> с техзаданием на платную доработку.
 
-Полный список моих работ опубликован <a href="http://across-ocean.otshelnik-fm.ru/" target="_blank">на моем демо-сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>
+Все мои работы опубликованы <a href="https://otshelnik-fm.ru/?p=2562" target="_blank">на моём сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>
