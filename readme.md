@@ -7,7 +7,7 @@
 
 ## Demo:
 
-Демонстрация работы [здесь](http://across-ocean.otshelnik-fm.ru/magnific-popup-recall-demo/)  
+Демонстрация работы, например, [здесь](https://otshelnik-fm.ru/alternativa-wordpress-plaginu-theme-my-login/)  
 
 ------------------------------
 
@@ -20,6 +20,8 @@
 - На мобильниках позволяет двумя пальцами увеличить изображение - масштабируя его. Ни одна мелкая деталь не останется незамеченной  
 - В всплывающем окне воспроизводит Gif-анимацию  
 - Возможно исключить увеличение изображения  
+- 8 языков
+- Поддержка PrimeForum и Prime Image Uploader
 
 ------------------------------
 
@@ -66,6 +68,16 @@
 ------------------------------
 
 ## Changelog  
+**2018-06-20**  
+v1.3  
+* Поддержка мультиязычности  
+* Добавлены переводы на 8 языков: Русский, английский, украинский, немецкий, итальянский, испанский, французский, румынский  
+* Добавлена иконка дополнения  
+* Стили не критичные для 1-го экрана, поэтому гружу их в подвале.  
+* Стили от ядра magnific сжал  
+* Анимация переведена на ядро WP-Recall (animate-css)  
+
+
 **2017-09-05**  
 v1.2  
 * Поддержка дополнения [Prime Image Uploader](https://codeseller.ru/products/prime-image-uploader/) для [Prime Forum](https://codeseller.ru/products/primeforum/)  
@@ -90,10 +102,10 @@ v1.0
 ## Поддержка и контакты  
 
 * Поддержка осуществляется в рамках текущего функционала дополнения  
-* При возникновении проблемы, создайте соотвествующую тему на [форуме поддержки](https://codeseller.ru/forum/product-15611/) товара  
-* Если вам нужна доработка под ваши нужды - вы можете обратиться ко мне в <a href="https://codeseller.ru/author/otshelnik-fm/?tab=chat" target="_blank">ЛС</a> с техзаданием на платную доработку.  
+* При возникновении проблемы, создайте соотвествующую тему на форуме поддержки товара  
+* Если вам нужна доработка под ваши нужды - вы можете обратиться ко мне в [ЛС](https://codeseller.ru/author/otshelnik-fm/?tab=chat) с техзаданием на платную доработку.  
 
-Полный список моих работ опубликован <a href="http://across-ocean.otshelnik-fm.ru/" target="_blank">на моем демо-сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>  
+Полный список моих работ опубликован на [моём сайте](https://otshelnik-fm.ru/all-my-addons-for-wp-recall/) и в каталоге магазина [CodeSeller.ru](https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products)  
 
 ------------------------------
 
