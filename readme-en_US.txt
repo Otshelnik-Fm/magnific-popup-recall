@@ -43,6 +43,17 @@ So: <code>&lt;a href=&quot;http://link-to-full-picture.jpg&quot;&gt;&lt;img src=
 There is a way out - after successfully loading ajax you need to reinitialize the script:
 Just call in your script, after the ajax-request, the js function: <code>MpActivate();</code>
 
+The lightbox initialization function takes the name of the attribute as the first argument  
+- this allows you to refine the scope of image search, rather than search the entire DOM tree.  
+- Accordingly, the best speed and less memory for the operation  
+Example:  
+```
+    var dAttr = '.chat-messages';  
+    MpActivate(dAttr);  
+```
+- pass class.  
+But you can also id: var dAttr = '#some-wrapper';   
+
 <hr style="border: 1px solid #ddd;">
 
 
@@ -55,7 +66,38 @@ Just call in your script, after the ajax-request, the js function: <code>MpActiv
 
 
 
-== Changelog ==
+== Changelog ==  
+**2018-09-30**  
+v2.0  
+* Support for WP-Recall 16.16  
+
+* Support for Rcl Chat:  
+- Private messages and shared chat  
+- Switching pagination in chat  
+- Switching to important messages and back  
+- Opened the chat window: in minichate, in the prime forum, in the LAN (even on F5)  
+- Add or receive a new message in the chat and LAN  
+- - All these actions, if the image has come - will allow to deduce it in a lightbox  
+
+* Support PrimeForum:  
+- Receiving someone else's message on the forum or sending a message on the forum - if there is a picture - it's picked up in a lightbox  
+- Preview message before sending. Now the image in the lightbox and there  
+
+* The lightbox initialization function takes the name of the attribute as the first argument  
+- this allows you to refine the scope of image search, rather than search the entire DOM tree.  
+- Accordingly, the best speed and less memory for the operation  
+Example:  
+`` `
+    var dAttr = '.chat-messages';  
+    MpActivate (dAttr);  
+`` `
+- pass class.  
+But you can also id: var dAttr = '#some-wrapper';  
+- Translated to this mechanism and integration with the chat and the prime forum  
+
+* Minor changes in styles  
+
+
 
 = 2018-06-20 =
 v1.3
