@@ -7,7 +7,7 @@
 
 ## Demo:
 
-Демонстрация работы, например, [здесь](https://otshelnik-fm.ru/alternativa-wordpress-plaginu-theme-my-login/)  
+Демонстрация работы, например, [здесь](https://otshelnik-fm.ru/alternativa-wordpress-plaginu-theme-my-login/?utm_source=free-addons&utm_medium=addon-description-demo-link&utm_campaign=magnific-popup-recall&utm_content=github.com&utm_term=gallery-demo)  
 
 ------------------------------
 
@@ -80,6 +80,14 @@
 ------------------------------
 
 ## Changelog  
+**2018-12-10**  
+v2.1  
+* Поддержка WP-Recall 16.17.0  
+* Поддержка блока "Галерея" Gutenberg  
+* Поддержка блока "Изображение" Gutenberg  
+* небольшие правки  
+
+
 **2018-09-30**  
 v2.0  
 * Поддержка WP-Recall 16.16  
@@ -148,7 +156,7 @@ v1.0
 * При возникновении проблемы, создайте соотвествующую тему на форуме поддержки товара  
 * Если вам нужна доработка под ваши нужды - вы можете обратиться ко мне в [ЛС](https://codeseller.ru/author/otshelnik-fm/?tab=chat) с техзаданием на платную доработку.  
 
-Полный список моих работ опубликован на [моём сайте](https://otshelnik-fm.ru/all-my-addons-for-wp-recall/) и в каталоге магазина [CodeSeller.ru](https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products)  
+Полный список моих работ опубликован на [моём сайте](https://otshelnik-fm.ru/all-my-addons-for-wp-recall/?utm_source=free-addons&utm_medium=addon-description&utm_campaign=magnific-popup-recall&utm_content=github.com&utm_term=all-my-addons) и в каталоге магазина [CodeSeller.ru](https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products)  
 
 ------------------------------
 

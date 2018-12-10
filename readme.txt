@@ -56,6 +56,14 @@
 
 
 == Changelog ==
+= 2018-12-10 =
+v2.1
+* Поддержка WP-Recall 16.17.0  
+* Поддержка блока "Галерея" Gutenberg
+* Поддержка блока "Изображение" Gutenberg
+* небольшие правки
+
+
 = 2018-09-30 =
 v2.0
 * Поддержка WP-Recall 16.16
@@ -125,4 +133,4 @@ v1.0
 * При возникновении проблемы, создайте соотвествующую тему на форуме поддержки товара
 * Если вам нужна доработка под ваши нужды - вы можете обратиться ко мне в <a href="https://codeseller.ru/author/otshelnik-fm/?tab=chat" target="_blank">ЛС</a> с техзаданием на платную доработку.
 
-Все мои работы опубликованы <a href="https://otshelnik-fm.ru/?p=2562" target="_blank">на моём сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>
+Все мои работы опубликованы <a href="https://otshelnik-fm.ru/?p=2562&utm_source=free-addons&utm_medium=addon-description&utm_campaign=magnific-popup-recall&utm_content=codeseller.ru&utm_term=all-my-addons" target="_blank">на моём сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>

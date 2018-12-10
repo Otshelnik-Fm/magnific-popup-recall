@@ -18,18 +18,18 @@ if ( !defined('ABSPATH') ) exit;
 // http://dimsemenov.com/plugins/magnific-popup/
 // подключаю скрипты
 function mpr_load_resource() {
-    if(!is_admin()){
+    if( !is_admin() ){
         //rcl_enqueue_style('mpr-general',rcl_addon_url('incl/dist/magnific-popup.css', __FILE__)); // родные стили от скрипта теперь в общем файле
-        rcl_enqueue_style('mpr-second',rcl_addon_url('mpr-style.css', __FILE__), true); // 3 аргумент - грузить в подвале
+        rcl_enqueue_style('mpr-second', rcl_addon_url('mpr-style.css', __FILE__), true); // 3 аргумент - грузить в подвале
     }
 }
-add_action('rcl_enqueue_scripts', 'mpr_load_resource',10);
+add_action('rcl_enqueue_scripts', 'mpr_load_resource', 10);
 
 
 
 // скрипт magnific в футере
 function mpr_load_scr() {
-    wp_enqueue_script('mpr-script', rcl_addon_url('incl/dist/jquery.magnific-popup.min.js', __FILE__),array('jquery'),'2.0.0',true);
+    wp_enqueue_script('mpr-script', rcl_addon_url('incl/dist/jquery.magnific-popup.min.js', __FILE__), array('jquery'), '2.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'mpr_load_scr', 10);
 
@@ -49,7 +49,7 @@ function mpr_localize($data){
 
     return $data;
 }
-add_filter('rcl_init_js_variables','mpr_localize',10);
+add_filter('rcl_init_js_variables', 'mpr_localize', 10);
 
 
 
@@ -57,8 +57,18 @@ add_filter('rcl_init_js_variables','mpr_localize',10);
 function mpr_textdomain(){
     load_textdomain( 'mpr-magnific', rcl_addon_path(__FILE__).'/languages/mpr-magnific-'.get_locale().'.mo' );
 }
-add_action('plugins_loaded', 'mpr_textdomain',10);
+add_action('plugins_loaded', 'mpr_textdomain', 10);
 
+
+function mpr_ettings_page(){
+    $chr_page = get_current_screen();
+
+    if($chr_page->base != 'wp-recall_page_rcl-options') return;
+    if( isset($_COOKIE['otfmi_1']) && isset($_COOKIE['otfmi_2']) && isset($_COOKIE['otfmi_3']) )  return;
+
+    require_once 'admin/for-settings.php';
+}
+add_action('admin_footer', 'mpr_ettings_page');
 
 
 // скрипт инициализации
@@ -74,7 +84,7 @@ echo "
 <script>function mprChatReload(){var a='.chat-messages';MpActivate(a)}rcl_add_action('rcl_get_chat_page','mprChatReload');rcl_add_action('rcl_chat_important_manager_shift','mprChatReload');rcl_add_action('rcl_init_chat','mprChatReload');rcl_add_action('rcl_chat_add_message','mprChatReload');function mprChatGetMessagesReload(a){var b=a.result.content;if(b.length<=0)return;var c='.chat-messages';MpActivate(c)}rcl_add_action('rcl_chat_get_messages','mprChatGetMessagesReload');</script>
 ";
 }
-add_action('wp_footer','mpr_init_script',220);
+add_action('wp_footer', 'mpr_init_script', 220);
 
 
 
